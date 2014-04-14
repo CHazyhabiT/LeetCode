@@ -1,5 +1,11 @@
 LeetCode
 ========
-Repository for LeetCode
 
-some related problem will be collected in a sub-repository.
+Problems with similar topic will be collected in a sub-repository.
+
+- Binary Tree
+- Linked List
+- Searching
+- Sorting
+- Dynamic Programming
+- Bit Manipulation
