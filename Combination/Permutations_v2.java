@@ -12,17 +12,10 @@ public class Solution {
             for(ArrayList<Integer> ele : current){
                 int length = ele.size();
                 for(int j=0;j<=length;++j){
-                    ArrayList<Integer> temp = new ArrayList<Integer>();
-                    int k=0;
-                    while(k<j){
-                        temp.add(ele.get(k));
-                        k++;
-                    }
-                    temp.add(value);
-                    while(k<length){
-                        temp.add(ele.get(k));
-                        k++;
-                    }
+                    // clone returns a shallow copy of this ArrayList instance (Object)
+                    ArrayList<Integer> temp = (ArrayList<Integer>) ele.clone();
+                    // ArrayList.add(int index, E element) add element to a specific position
+                    temp.add(j, value);
                     result.add(temp);
                 }
             }

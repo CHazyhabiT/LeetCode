@@ -1,3 +1,11 @@
+// Chester
+
+// BFS 
+// visit the node level by level
+// time O(N)
+// space O(logN)
+
+
 /**
  * Definition for binary tree
  * public class TreeNode {
@@ -12,6 +20,7 @@ public class Solution {
     public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         if(root==null) return result;
+	// store the nodes in the previous level
         LinkedList<TreeNode> parent = new LinkedList<TreeNode>();
         parent.add(root);
         while(!parent.isEmpty()) {
