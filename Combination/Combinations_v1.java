@@ -1,3 +1,11 @@
+// Chester
+
+// DP
+// combine(n, k) from 1,2, ..., n choose k elements (C(n, k))
+// C(n, k) = n + C(n-1, k-1) & (n-1) + C(n-2, k-1) & ... & k + (k-1, k-1)
+// C(n, 0) = []
+// C(1, 1) = [1]
+
 public class Solution {
     public ArrayList<ArrayList<Integer>> combine(int n, int k) {
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();

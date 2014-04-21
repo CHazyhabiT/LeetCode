@@ -1,3 +1,7 @@
+// Chester
+
+// first to find the real start value O(logN)
+// then call the binarySearch() O(logN)
 public class Solution {
     public boolean search(int[] A, int target) {
         if(A.length<=0) return false;
