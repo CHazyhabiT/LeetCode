@@ -1,3 +1,8 @@
+// Chester
+
+// DP
+// add a number at a time from num[0] to num[n-1]
+
 public class Solution {
     public ArrayList<ArrayList<Integer>> permute(int[] num) {
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();

@@ -1,13 +1,17 @@
-/**
-* DFS
-*/
+// Chester
+
+// DFS
+// when visited a node, mark it visited
+
+// O(N!)
 public class Solution {
     public ArrayList<ArrayList<Integer>> permute(int[] num) {
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         int len = num.length;
         if(len==0) return result;
         ArrayList<Integer> tuple = new ArrayList<Integer>();
-        boolean[] mark = new boolean[len];
+        boolean[] mark = new boolean[len]; // symbol of the DFS
+	// DFS asks for a start point
         for(int i=0;i<len;++i) {
             permute(result, tuple, num, mark, i);
             

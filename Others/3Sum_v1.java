@@ -1,45 +1,46 @@
+// Chester
+
+// O(n^2)
 import java.util.Hashtable;
 import java.util.HashSet;
 public class Solution {
     public ArrayList<ArrayList<Integer>> threeSum(int[] num) {
 		if (num.length <= 2){
 		    return new ArrayList<ArrayList<Integer>>();
-		    
 		}
 
-		sort(num);
+		sort(num); // could use the inserted sort method: Arrays.sort(num);
 
 		ArrayList<ArrayList<Integer>> resultA = new ArrayList<ArrayList<Integer>>();
+		// store the already found list
 		HashSet<ArrayList<Integer>> mark = new HashSet<ArrayList<Integer>>();
+		// store the already visited number with its index
 		Hashtable<Integer, Integer> ht = new Hashtable<Integer, Integer>();
-		for (int i = 0; i < num.length-1; i++) {
-
-			for (int j = i + 1; j < num.length; j++) {
+		for (int i = 0; i < num.length-1; i++) { // i<num.length-1
+			for (int j = i + 1; j < num.length; j++) { // j<num.length
 				int rest = 0 - num[i] - num[j];
-
+				// at this point num[i] and num[i] haven't been stored in ht
 				if (ht.containsKey(rest)) {
 					ArrayList<Integer> result = new ArrayList<Integer>();
+					// rest <= num[i] <= num[j]
 					result.add(rest);
 					result.add(num[i]);
 					result.add(num[j]);
 					if (!mark.contains(result)) {
-
-						if (ht.get(rest) != i) {
-							resultA.add(result);
-							mark.add(result);
-						}
+						resultA.add(result);
+						mark.add(result);
+						
 					}
 				}
-				
-
 			}
-						ht.put(num[i], i);
+		ht.put(num[i], i);
 		}
 
 		return resultA;
 
 	}
 
+	// merge-sort
 	private void sort(int[] num) {
 		if (num.length <= 1)
 			return;

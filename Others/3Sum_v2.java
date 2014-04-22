@@ -1,3 +1,11 @@
+// Chester
+
+// three pointers
+// left-p: start with 0 each time
+// right-p: start with num.length-1 each time
+// mid-p: traverse from index (1, 2, ..., num.length-2)
+// O(n^2)
+
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashSet;
