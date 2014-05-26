@@ -1,3 +1,6 @@
+// Chester
+
+// Binary search: O(logN)
 public class Solution {
     public int searchInsert(int[] A, int target) {
         int length = A.length;

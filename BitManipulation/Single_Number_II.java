@@ -1,3 +1,8 @@
+// Chester
+
+// 32*O(n)
+// & | ^
+// << >>
 public class Solution {
     public int singleNumber(int[] A) {
         int[] count = new int[32];

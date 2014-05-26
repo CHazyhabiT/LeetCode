@@ -1,3 +1,5 @@
+// Chester
+
 public class Solution {
     public int removeDuplicates(int[] A) {
         if(A.length<=1) return A.length;
@@ -10,22 +12,12 @@ public class Solution {
                 ++count;
                 ++pointer;
                 --nLen;
-                
             }
             if(pointer<A.length){
                 A[pointer-count] = A[pointer];
                 ++pointer;
             }
-            
-            
-            
-            
-            
         }
-        return nLen;
-        
-        
+        return nLen;     
     }
-    
-
 }

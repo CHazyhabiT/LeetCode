@@ -1,3 +1,12 @@
+// Chester
+
+// test case:
+// 123
+// -123
+// 10, 100: ask interviewer how to deal with this case
+// the reverse integer might overflow, assume the input is a 32-bit integer, 
+// then the reverse of 1000000003 overflows
+
 public class Solution {
     public int reverse(int x) {
         int reverse = 0;

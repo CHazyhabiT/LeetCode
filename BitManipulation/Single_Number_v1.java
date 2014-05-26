@@ -1,3 +1,4 @@
+// Chester
 
 public class Solution {
     public int singleNumber(int[] A) {
@@ -6,8 +7,6 @@ public class Solution {
             result ^= i;
             
         return result;
-        
-        
-        
+   
     }
 }

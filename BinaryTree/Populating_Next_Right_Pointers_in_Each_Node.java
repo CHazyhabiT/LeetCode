@@ -1,3 +1,5 @@
+// Chester
+
 /**
  * Definition for binary tree with next pointer.
  * public class TreeLinkNode {
@@ -10,26 +12,20 @@
  
 public class Solution {
     public void connect(TreeLinkNode root) {
-        if(root==null) return;
-        LinkedList<TreeLinkNode> current = new LinkedList<TreeLinkNode>();
-        current.add(root);
-        while(!current.isEmpty()){
-            LinkedList<TreeLinkNode> parent = current;
-            current = new LinkedList<TreeLinkNode>();
-            TreeLinkNode node = parent.pollFirst();
-
-            while(!parent.isEmpty()){
-                if(node.left!=null) current.add(node.left);
-                if(node.right!=null) current.add(node.right);
-                node.next = parent.peek();
-                node = parent.pollFirst();
-            }
-            node.next = null;
-            if(node.left!=null) current.add(node.left);
-            if(node.right!=null) current.add(node.right);
- 
-            
-        }
-  
+         if(root==null) return;
+         ArrayList<TreeLinkNode> parent = new ArrayList<TreeLinkNode>();
+         parent.add(root);
+         while(!parent.isEmpty()) {
+             ArrayList<TreeLinkNode> current = parent;
+             parent = new ArrayList<TreeLinkNode>();
+             for(int i=0;i<current.size();i++) {
+                 TreeLinkNode node = current.get(i);
+                 if(i!=current.size()-1) node.next = current.get(i+1); // in case nullPointerException
+                 if(node.left!=null) parent.add(node.left);
+                 if(node.right!=null) parent.add(node.right);
+             
+             }
+         }
+        
     }
 }

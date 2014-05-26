@@ -1,3 +1,6 @@
+// Chester
+
+// optimized: reduce the operation of exch();
 public class Solution {
     public int removeElement(int[] A, int elem) {
         if(A.length<1) return 0;

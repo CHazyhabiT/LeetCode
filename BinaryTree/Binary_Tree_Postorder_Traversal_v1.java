@@ -1,3 +1,5 @@
+// Chester
+
 /**
  * Definition for binary tree
  * public class TreeNode {
@@ -13,6 +15,7 @@ public class Solution {
         if(root==null) return result;
         Stack<TreeNode> stack = new Stack<TreeNode>();
         TreeNode node = root;
+	// pre used to record the node already being stored
         TreeNode pre = null;
         while(node!=null||!stack.empty()) {
             while(node!=null) {

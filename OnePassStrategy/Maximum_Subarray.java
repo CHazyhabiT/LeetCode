@@ -1,3 +1,6 @@
+// Chester
+
+// DP
 public class Solution {
     public int maxSubArray(int[] A) {
         if(A.length<1) return 0;

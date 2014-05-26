@@ -1,3 +1,6 @@
+// Chester
+
+// standard iteration: Stack
 /**
  * Definition for binary tree
  * public class TreeNode {
@@ -24,7 +27,6 @@ public class Solution {
                 node = node.right;
             }
         }
-        
         return al;
     }
     
